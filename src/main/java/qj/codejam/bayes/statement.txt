@@ -1,0 +1,21 @@
+H name = minh bi HIV
+E name = test duong tinh
+
+Xác xuất minh bi HIV la` 0.0001%
+Bây giờ thấy test dương tính
+
+Khả năng test dương tính khi minh bị HIV là 99%
+Khả năng test dương tính khi không phải mình bị HIV là 1%
+
+
+Vậy bây giờ xác xuất mình bị HIV là 0.01%
+
+            P(T | N) 
+P(N | T) = ---------- x P(N)
+              P(T)
+              
+P(N) = 0.000001
+P(T | N) = 0.99
+
+P(T) = P(T | N) x P(N) + P(T | NN) x P(NN) = 0.000001 x 0.99 + 0.01 x 0.999999 = 0.010 000 98 
+

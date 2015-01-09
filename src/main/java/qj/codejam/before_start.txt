@@ -1,0 +1,10 @@
+================ Before start =============
+Nước
+Đi vệ sing
+Cắt móng tay
+
+Internet, table location
+
+
+
+Don't forget bruteforce if numbers are small enough

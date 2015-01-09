@@ -1,0 +1,122 @@
+Google Code Jam
+Round 1B 2013
+A. Osmos
+B. Falling Diamonds
+C. Garbled Email
+Contest Analysis
+Questions asked
+   Submissions
+Osmos
+10pt	
+Not attempted
+4627/7207 users correct (64%)
+12pt	
+Not attempted
+3501/4538 users correct (77%)
+Falling Diamonds
+14pt	
+Not attempted
+935/1857 users correct (50%)
+28pt	
+Not attempted
+522/714 users correct (73%)
+Garbled Email
+12pt	
+Not attempted
+444/894 users correct (50%)
+24pt	
+Not attempted
+255/345 users correct (74%)
+   Top Scores
+dolphinigle	100
+K.A.D.R	100
+blmarket	100
+rng..58	100
+Seyaua	100
+bmerry	100
+jcn	100
+chokudai	100
+IvanRomanov	100
+neal.wu	100
+Practice Mode
+Contest scoreboard | Sign in
+Problem A. Osmos
+This contest is open for practice. You can try every problem as many times as you like, though we won't keep track of which problems you solve. Read the Quick-Start Guide to get started.
+Small input
+10 points	
+Solve A-small
+Large input
+12 points	
+Solve A-large
+Problem
+
+Armin is playing Osmos, a physics-based puzzle game developed by Hemisphere Games. In this game, he plays a "mote", moving around and absorbing smaller motes.
+
+A "mote" in English is a small particle. In this game, it's a thing that absorbs (or is absorbed by) other things! The game in this problem has a similar idea to Osmos, but does not assume you have played the game.
+
+When Armin's mote absorbs a smaller mote, his mote becomes bigger by the smaller mote's size. Now that it's bigger, it might be able to absorb even more motes. For example: suppose Armin's mote has size 10, and there are other motes of sizes 9, 13 and 19. At the start, Armin's mote can only absorb the mote of size 9. When it absorbs that, it will have size 19. Then it can only absorb the mote of size 13. When it absorbs that, it'll have size 32. Now Armin's mote can absorb the last mote.
+
+Note that Armin's mote can absorb another mote if and only if the other mote is smaller. If the other mote is the same size as his, his mote can't absorb it.
+
+You are responsible for the program that creates motes for Armin to absorb. The program has already created some motes, of various sizes, and has created Armin's mote. Unfortunately, given his mote's size and the list of other motes, it's possible that there's no way for Armin's mote to absorb them all.
+
+You want to fix that. There are two kinds of operations you can perform, in any order, any number of times: you can add a mote of any positive integer size to the game, or you can remove any one of the existing motes. What is the minimum number of times you can perform those operations in order to make it possible for Armin's mote to absorb every other mote?
+
+For example, suppose Armin's mote is of size 10 and the other motes are of sizes [9, 20, 25, 100]. This game isn't currently solvable, but by adding a mote of size 3 and removing the mote of size 100, you can make it solvable in only 2 operations. The answer here is 2.
+
+Input
+
+The first line of the input gives the number of test cases, T. T test cases follow. The first line of each test case gives the size of Armin's mote, A, and the number of other motes, N. The second line contains the N sizes of the other motes. All the mote sizes given will be integers.
+
+Output
+
+For each test case, output one line containing "Case #x: y", where x is the case number (starting from 1) and y is the minimum number of operations needed to make the game solvable.
+
+Limits
+
+1 ≤ T ≤ 100.
+Small dataset
+
+1 ≤ A ≤ 100.
+1 ≤ all mote sizes ≤ 100.
+1 ≤ N ≤ 10.
+
+Large dataset
+
+1 ≤ A ≤ 106.
+1 ≤ all mote sizes ≤ 106.
+1 ≤ N ≤ 100.
+
+Sample
+
+
+Input 
+ 	
+Output 
+ 
+4
+2 2
+2 1
+2 4
+2 1 1 6
+10 4
+25 20 9 100
+1 4
+1 1 1 1
+Case #1: 0
+Case #2: 1
+Case #3: 2
+Case #4: 4
+
+Notes
+
+Although the size of motes is limited in the input files, Armin's mote may grow larger than the provided limits by absorbing other motes.
+
+Osmos was created by Hemisphere Games. Hemisphere Games does not endorse and has no involvement with Google Code Jam.
+
+All problem statements, input data and contest analyses are licensed under the Creative Commons Attribution License.
+
+© 2008-2013 Google Google Home - Terms and Conditions - Privacy Policies and Principles 
+
+
+ 

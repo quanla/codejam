@@ -1,0 +1,116 @@
+Google Code Jam
+Round 1B 2013
+A. Osmos
+B. Falling Diamonds
+C. Garbled Email
+Contest Analysis
+Questions asked
+   Submissions
+Osmos
+10pt	
+Not attempted
+4627/7207 users correct (64%)
+12pt	
+Not attempted
+3501/4538 users correct (77%)
+Falling Diamonds
+14pt	
+Not attempted
+935/1857 users correct (50%)
+28pt	
+Not attempted
+522/714 users correct (73%)
+Garbled Email
+12pt	
+Not attempted
+444/894 users correct (50%)
+24pt	
+Not attempted
+255/345 users correct (74%)
+   Top Scores
+dolphinigle	100
+K.A.D.R	100
+blmarket	100
+rng..58	100
+Seyaua	100
+bmerry	100
+jcn	100
+chokudai	100
+IvanRomanov	100
+neal.wu	100
+Practice Mode
+Contest scoreboard | Sign in
+Problem B. Falling Diamonds
+This contest is open for practice. You can try every problem as many times as you like, though we won't keep track of which problems you solve. Read the Quick-Start Guide to get started.
+Small input
+14 points	
+Solve B-small
+Large input
+28 points	
+Solve B-large
+Problem
+
+Diamonds are falling from the sky. People are now buying up locations where the diamonds can land, just to own a diamond if one does land there. You have been offered one such place, and want to know whether it is a good deal.
+
+Diamonds are shaped like, you guessed it, diamonds: they are squares with vertices (X-1, Y), (X, Y+1), (X+1, Y) and (X, Y-1) for some X, Y which we call the center of the diamond. All the diamonds are always in the X-Y plane. X is the horizontal direction, Y is the vertical direction. The ground is at Y=0, and positive Y coordinates are above the ground.
+
+The diamonds fall one at a time along the Y axis. This means that they start at (0, Y) with Y very large, and fall vertically down, until they hit either the ground or another diamond.
+
+When a diamond hits the ground, it falls until it is buried into the ground up to its center, and then stops moving. This effectively means that all diamonds stop falling or sliding if their center reaches Y=0.
+
+When a diamond hits another diamond, vertex to vertex, it can start sliding down, without turning, in one of the two possible directions: down and left, or down and right. If there is no diamond immediately blocking either of the sides, it slides left or right with equal probability. If there is a diamond blocking one of the sides, the falling diamond will slide to the other side until it is blocked by another diamond, or becomes buried in the ground. If there are diamonds blocking the paths to the left and to the right, the diamond just stops.
+
+
+Consider the example in the picture. The first diamond hits the ground and stops when halfway buried, with its center at (0, 0). The second diamond may slide either to the left or to the right with equal probability. Here, it happened to go left. It stops buried in the ground next to the first diamond, at (-2, 0). The third diamond will also hit the first one. Then it will either randomly slide to the right and stop in the ground, or slide to the left, and stop between and above the two already-placed diamonds. It again happened to go left, so it stopped at (-1, 1). The fourth diamond has no choice: it will slide right, and stop in the ground at (2, 0).
+
+Input
+
+The first line of the input gives the number of test cases, T. T lines follow. Each line contains three integers: the number of falling diamonds N, and the position X, Y of the place you are interested in. Note the place that you are interested in buying does not have to be at or near the ground.
+
+Output
+
+For each test case output one line containing "Case #x: p", where x is the case number (starting from 1) and p is the probability that one of the N diamonds will fall so that its center ends up exactly at (X, Y). The answer will be considered correct if it is within an absolute error of 10-6 away from the correct answer. See the FAQ for an explanation of what that means, and what formats of floating-point numbers we accept.
+
+Limits
+
+1 ≤ T ≤ 100.
+-10,000 ≤ X ≤ 10,000.
+0 ≤ Y ≤ 10,000. 
+X + Y is even.
+
+Small dataset
+
+1 ≤ N ≤ 20.
+
+Large dataset
+
+1 ≤ N ≤ 106.
+
+Sample
+
+
+Input 
+ 	
+Output 
+ 
+7
+1 0 0
+1 0 2
+3 0 0
+3 2 0
+3 1 1
+4 1 1
+4 0 2
+Case #1: 1.0
+Case #2: 0.0
+Case #3: 1.0
+Case #4: 0.75
+Case #5: 0.25
+Case #6: 0.5
+Case #7: 0.0
+All problem statements, input data and contest analyses are licensed under the Creative Commons Attribution License.
+
+© 2008-2013 Google Google Home - Terms and Conditions - Privacy Policies and Principles 
+
+
+ 

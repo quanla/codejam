@@ -1,0 +1,88 @@
+﻿<html>
+	<head>
+		<title>Bayes Calculator</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style type="text/css">
+			body {
+				font-family: Verdana;
+			}
+			
+			.bold {
+				font-weight: bold;
+			}
+			
+			.percent {
+				text-align: center;
+				width: 200px;
+			}
+		</style>
+		<script type="text/javascript" src="file://E:/WorkOn/qj-svn/commercial-apps/store_man/webjs/src/main/javascript/common/ModelDisplayer.js"></script>
+		<script type="text/javascript" src="file://E:/WorkOn/qj-svn/commercial-apps/store_man/web/data/web_common/js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="file://E:/WorkOn/qj-svn/tool/web-q/src/main/java/qj/tool/web/common.js"></script>
+		<script type="text/javascript" src="file://E:/WorkOn/qj-svn/commercial-apps/store_man/webjs/src/main/javascript/common/ModelDisplayer.js"></script>
+		<script type="text/javascript"
+		  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		
+		<script>
+			$(function() {
+				var md = Model.displayer({
+					hName: {},
+					eName: {},
+					pH: {
+						displayFormat: "percent"
+					},
+					pEH: {
+						displayFormat: "percent"
+					},
+					pENH: {
+						displayFormat: "percent"
+					},
+					a: {}
+				});
+				$("#hName").html(md.input("hName"));
+				$("#eName").html(md.input("eName"));
+				$("#pH").html(md.input("pH").addClass("percent"));
+				$("#pEH").html(md.input("pEH").addClass("percent"));
+				$("#pENH").html(md.input("pENH").addClass("percent"));
+				
+				md.bindText("hName", $(".hName"));
+				md.bindText("eName", $(".eName"));
+				
+				md.onChange(function(data) {
+					if (data.eName != null && data.hName != null && data.pH != null && data.pEH != null && data.pENH != null) {
+						with (data) {
+// 							$("#result").text("");							
+							$("#result").html("\\[ \\frac{P(E|H)P(H)}{P(E|H)P(H) + P(E|NH)P(NH)} = \\frac{" + fixFloat(pEH * pH) + "}{" + fixFloat(pEH * pH) + " + " + fixFloat(pENH * (1-pH)) + "} = " + pEH * pH / (pEH * pH + pENH * (1-pH)) * 100 + " \\% \\]");							
+							MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+						}
+					} else {
+						$("#result").text("...");
+					}
+				});
+				
+				md.setData({
+					hName: "mình bị HIV",
+					eName: "test dương tính",
+					pH: 0.001,
+					pEH: 0.99,
+					pENH: 0.01
+				});
+			});
+			
+		</script>
+	</head>
+	<body>
+		H name = <span id="hName"></span><br/>
+		E name = <span id="eName"></span><br/>
+		<br/>
+		Xác xuất <span class="hName bold"></span> la` <span id="pH"></span><br/>
+		Bây giờ thấy <span class="eName bold"></span><br/>
+		<br/>
+		Khả năng <span class="eName bold"></span> khi <span class="hName bold"></span> là <span id="pEH"></span><br/>
+		Khả năng <span class="eName bold"></span> khi không phải <span class="hName bold"></span> là <span id="pENH"></span><br/>
+		<br/>
+		<br/>
+		Vậy bây giờ xác xuất <span class="hName bold"></span> là <span id="result" class="bold">\(ax^2 + bx + c = 0\)</span>
+	</body>
+</html>

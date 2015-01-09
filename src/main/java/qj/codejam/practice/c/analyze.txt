@@ -1,0 +1,3 @@
+F is the max floor for D and B
+The last drop will make either D=0 or B=0
+The previous drop have to make sure that after dropping (D-- and B-- or B same) will have enough eggs to test the remain floors
