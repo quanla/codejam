@@ -123,6 +123,7 @@ public class CodeJam {
 					String result = solveF.e();
 					if (singleCase) {
 						output.e(result);
+
 					} else {
 						output.e("Case #" + caseNum[0] + ":" + (result != null && result.startsWith("\n")? result : " " + result) );
 					}

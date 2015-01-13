@@ -8,17 +8,17 @@ import qj.util.Cols;
 
 public class SavingTheUniverse {
 	public static void main(String[] args) {
-//		String resName = "sample.in";
-		String resName = "A-large-practice.in";
+		String resName = "sample.in";
+//		String resName = "A-large-practice.in";
 //		String resName = "A-small-practice.in";
 		CodeJam.solver(resName, lineF -> {
 			int seCount = Integer.parseInt(lineF.e());
-			final LinkedList<String> ses = new LinkedList<String>();
+			final LinkedList<String> ses = new LinkedList<>();
 			for (int i = 0; i < seCount; i++) {
 				ses.add(lineF.e());
 			}
 			
-			final LinkedList<String> words = new LinkedList<String>();
+			final LinkedList<String> words = new LinkedList<>();
 			int wCount = Integer.parseInt(lineF.e());
 			for (int i = 0; i < wCount; i++) {
 				words.add(lineF.e());
